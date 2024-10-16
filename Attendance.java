@@ -1,24 +1,28 @@
+/*
+James Arnold S. Nieves
+October 1, 2024
+Class attendance
+*/
 import java.util.Scanner;
 
 public class Attendance {
     public static void main(String[] args) {
-        // Create a scanner object for input
         Scanner scanner = new Scanner(System.in);
 
-        // Input the total number of students in the class
+        // the user input how many student are there
         System.out.print("Enter the total number of students: ");
         int totalStudents = scanner.nextInt();
 
-        // Initialize counters for present and absent students
+        // counter for present and absent student
         int presentCount = 0;
         int absentCount = 0;
 
-        // Loop through each student to take attendance
+        // look through out the attendance
         for (int i = 1; i <= totalStudents; i++) {
             System.out.print("Is student " + i + " present? (Y/N): ");
             char attendance = scanner.next().charAt(0);
 
-            // Check if the student is present or absent
+            // checking for the if the student is present or absent
             if (attendance == 'Y' || attendance == 'y') {
                 presentCount++;
             } else if (attendance == 'N' || attendance == 'n') {
@@ -29,11 +33,11 @@ public class Attendance {
             }
         }
 
-        // Display the final counts
+        //final count
         System.out.println("Total present: " + presentCount);
         System.out.println("Total absent: " + absentCount);
 
-        // Close the scanner
+        
         scanner.close();
     }
 }
